@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random Websites Grid View</title>
+	<style>
+		iframe {
+			display: block;
+			width: 100%;
+			height: 100%;
+			border: none;
+		}
+
+		.grid-container {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(2, 1fr);
+			grid-gap: 10px;
+			height: 800px;
+		}
+
+		.grid-item {
+			position: relative;
+			overflow: hidden;
+		}
+
+		.grid-item:before {
+			content: "";
+			display: block;
+			padding-top: 100%;
+		}
+
+		.grid-item iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="grid-container">
+		<div class="grid-item">
+			<iframe src="http://mrush.net/"></iframe>
+		</div>
+		<div class="grid-item">
+			<iframe src="http://a.mrush.net/"></iframe>
+		</div>
+		<div class="grid-item">
+			<iframe src="http://b.mrush.net/"></iframe>
+		</div>
+		<div class="grid-item">
+			<iframe src="http://c.mrush.net/"></iframe>
+		</div>
+	</div>
+</body>
+</html>
